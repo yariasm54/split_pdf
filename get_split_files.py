@@ -5,7 +5,7 @@ from io import BytesIO
 import PyPDF2
 import zipfile
 import pandas as pd
-from IPython.display import display
+from IPython.display import display, FileLink
 
 # Own Libraries
 from get_df_name_files import get_df
@@ -43,7 +43,6 @@ def get_split(excel_data, pdf_data):
                 nuevo_pdf.seek(0)
                 zipf.writestr(nuevo_archivo, nuevo_pdf.read())
     zip_buffer.seek(0)
-    from IPython.display import FileLink
     with open('archivo_comprimido.zip', 'wb') as f:
         f.write(zip_buffer.read())
     print("División completada y archivo ZIP generado.")
