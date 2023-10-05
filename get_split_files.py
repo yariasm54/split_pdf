@@ -4,7 +4,7 @@ import pandas as pd
 from io import BytesIO
 from IPython.display import display
 
-def get_split(pdf_data, excel_data):
+def get_split(excel_data, pdf_data):
     pdf_file = BytesIO(pdf_data)
     pdf_reader = PyPDF2.PdfReader(pdf_file)
     paginas_de_division, ID_por_pagina = get_pages(pdf_file)
