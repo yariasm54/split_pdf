@@ -1,4 +1,7 @@
+# Standard Libraries
 import re
+
+# Thirdparty Libraries
 import PyPDF2
 
 def get_pages(pdf_file):
