@@ -1,8 +1,15 @@
+# Standard Libraries
+from io import BytesIO
+
+# Thirdparty Libraries
 import PyPDF2
 import zipfile
 import pandas as pd
-from io import BytesIO
 from IPython.display import display
+
+# Own Libraries
+from get_df_name_files import get_df
+from get_pages_to_divide import get_pages
 
 def get_split(excel_data, pdf_data):
     pdf_file = BytesIO(pdf_data)
