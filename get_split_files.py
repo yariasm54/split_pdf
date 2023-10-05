@@ -45,4 +45,4 @@ def get_split(excel_data, pdf_data):
     zip_buffer.seek(0)
     with open('archivo_comprimido.zip', 'wb') as f:
         f.write(zip_buffer.read())
-    print("División completada y archivo ZIP generado.")
+    print("\nDivisión completada y archivo ZIP generado.")
