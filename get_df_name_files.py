@@ -1,4 +1,7 @@
+# Standard Libraries
 from io import BytesIO
+
+# Thirdparty Libraries
 import pandas as pd
 
 def get_df(pdf_data):
