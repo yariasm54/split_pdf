@@ -25,7 +25,10 @@ def get_split(excel_data, pdf_data):
                 pagina = pdf_reader.pages[pagina_actual]
                 pdf_writer.add_page(pagina)
                 pagina_actual += 1
-            nombre_nuevo_archivo = df.loc[df['ID. INSCRIPCIÓN'] == int(ID_por_pagina[pagina_num]), 'NOMBRE DE ARCHIVO'].values[0]
+            try:
+                nombre_nuevo_archivo = df.loc[df['ID. INSCRIPCIÓN'] == int(ID_por_pagina[pagina_num]), 'NOMBRE DE ARCHIVO'].values[0]
+            except:
+                nombre_nuevo_archivo = int(ID_por_pagina[pagina_num])
             nuevo_archivo = f'{nombre_nuevo_archivo}.pdf'
             with BytesIO() as nuevo_pdf:
                 pdf_writer.write(nuevo_pdf)
