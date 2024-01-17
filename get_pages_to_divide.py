@@ -5,12 +5,14 @@ import re
 import PyPDF2
 
 def get_pages(pdf_file):
-    expresion_regular = r"ID\.(\d+)ProcesodeSelección"
+    # expresion_regular = r"ID\.(\d+)ProcesodeSelección"
+    expresion_regular = r"porpartedelaspirante(\d+)\,inscritoalempleocon"
     paginas_de_division = []
     ID_por_pagina = {}
     numero = 0
     pdf_reader = PyPDF2.PdfReader(pdf_file)
-    palabras_a_buscar = ["Proyectó:"]
+    # palabras_a_buscar = ["Proyectó:"]
+    palabras_a_buscar = ["Revisó:"]
     for pagina_num, pagina in enumerate(pdf_reader.pages):
         contenido = pagina.extract_text()
         texto_limpio = contenido.replace("\n", "").replace(" ", "")
