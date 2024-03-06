@@ -8,7 +8,8 @@ def get_pages(pdf_file):
     # expresion_regular = r"ID\.(\d+)ProcesodeSelección"
     # expresion_regular = r"porpartedelaspirante(\d+)\,inscritoalempleocon"
     # expresion_regular = r"AUTONo\.(\d+)DE2024"
-    expresion_regular = r"aspirante(\d+)\,"
+    # expresion_regular = r"aspirante(\d+)\,"
+    expresion_regular = r"ciudaníaNo\.(\d+)fue"
     paginas_de_division = []
     ID_por_pagina = {}
     numero = 0
