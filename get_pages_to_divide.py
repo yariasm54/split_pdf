@@ -5,10 +5,10 @@ import re
 import PyPDF2
 
 def get_pages(pdf_file):
-    expresion_regular = r"ID\.(\d+)ProcesodeSelección"
+    # expresion_regular = r"ID\.(\d+)ProcesodeSelección"
     # expresion_regular = r"porpartedelaspirante(\d+)\,inscritoalempleocon"
     # expresion_regular = r"AUTONo\.(\d+)DE2024"
-    # expresion_regular = r"aspirante\:(\d+)ProcesodeSelección"
+    expresion_regular = r"aspirante\:(\d+)\,"
     paginas_de_division = []
     ID_por_pagina = {}
     numero = 0
