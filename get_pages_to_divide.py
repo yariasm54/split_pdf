@@ -5,12 +5,12 @@ import re
 import PyPDF2
 
 def get_pages(pdf_file):
-    # expresion_regular = r"ID\.(\d+)ProcesodeSelección"
+    expresion_regular = r"ID\.(\d+)ProcesodeSelección"
     # expresion_regular = r"porpartedelaspirante(\d+)\,inscritoalempleocon"
     # expresion_regular = r"AUTONo\.(\d+)DE2024"
     # expresion_regular = r"aspirante(\d+)\,"
     # expresion_regular = r"ciudaníaNo\.(\d+)fue"
-    expresion_regular = r"RESOLUCIÓNNo\.(\d+)DE2024"
+    # expresion_regular = r"RESOLUCIÓNNo\.(\d+)DE2024"
     print('expresion_regular')
     print(expresion_regular)
     paginas_de_division = []
